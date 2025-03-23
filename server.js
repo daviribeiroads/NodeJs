@@ -15,6 +15,20 @@ import { fastify } from "fastify";
 
 const server = fastify();
 
+//Criando rotas
+server.get('/', () => {
+    return 'Hello World'
+})
+
+//Segunda rota
+server.get('/hello', () => {
+    return 'Segunda rota'
+})
+
+server.get('/node', () => {
+    return 'Terceira rota'
+})
+
 server.listen({
     port: 3333,
 })
