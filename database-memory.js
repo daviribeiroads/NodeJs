@@ -4,17 +4,17 @@ export class DatabaseMemory {
     #videos = new Map()
 
     list() {
-        return this.#videos.values()
+        return Array.from(this.#videos.values())
     }
 
     create(videos) {
         const videoId = randomUUID()
 
-        this.#videos.set(videoId, video)
+        this.#videos.set(videoId, videos)
     }
 
     update(id, video) {
-        this.#videos.set(id, video)
+        this.#videos.set(id, videos)
     }
 
     delete(id) {
