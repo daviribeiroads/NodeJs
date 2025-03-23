@@ -15,17 +15,18 @@ import { fastify } from "fastify";
 
 const server = fastify();
 
-//Criando rotas
-server.get('/', () => {
+//Nessa rota, vou usar o metodo POST, para criar meus víodeos
+server.post('/videos', () => {
     return 'Hello World'
 })
 
-//Segunda rota
-server.get('/hello', () => {
+//Com esse metodo GET, estou usando o mesmo recurso porém como metodos diferente.
+server.get('/videos', () => {
     return 'Segunda rota'
 })
 
-server.get('/node', () => {
+//Essa metodo vai ser usado para atualizar meus videos atraves do id
+server.put('/videos/:id', () => {
     return 'Terceira rota'
 })
 
